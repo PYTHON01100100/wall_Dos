@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!-- Open Graph Meta Tags -->
+  <meta property=og:title content=Wall Os>
+  <meta property=og:description content=🎨 Epic wallpapers await! 🌌>
+  <meta property=og:image content=https://wallos.purpleyard.xyz/wallpapers/nord/wallhaven-z88pvj.jpg>
+  <meta property=og:url content=https://wallos.purpleyard.xyz/>
+  <meta property=og:type content=website>
+  <meta property=og:logo content=https://img.icons8.com/pulsar-color/48/picture.png> <!-- Logo image URL -->
+
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name=twitter:card content=summary_large_image>
+  <meta name=twitter:title content=Wall Os>
+  <meta name=twitter:description content=🎨 Epic wallpapers await! 🌌>
+  <meta name=twitter:image content=https://wallos.purpleyard.xyz/wallpapers/nord/wallhaven-z88pvj.jpg>
+
+  <link rel='stylesheet' type='text/css' href='style.css'>
+  <title>Wall Os</title>
+  <link rel='icon' href='favicon.png' type='image/png'>
+  <script src='app.js' defer></script>
+  <script src='https://kit.fontawesome.com/13865d7982.js' crossorigin='anonymous' defer></script>
+</head>
+
+<body>
+  <div class='float-btns'>
+    <a href=https://www.youtube.com/@AbdulrahmanAlmyman target=_blank class=btn float-btn title=Subscribe>
+       <span>
+        <i class=fa fa-youtube aria-hidden=true></i>
+      </span>
+    </a>
+    <a href='https://python01100100.github.io/Abdulrahman_Almyman_Portfolio/' target='_blank' class='btn float-btn' title='Visit Me'>
+      <span>
+        <i class=fa-solid fa-blog></i>
+      </span>
+   </a>
+    <a href='https://github.com/PYTHON01100100' target='_blank' class='btn float-btn' title='my github' >
+      <span>
+        <i class='fa-brands fa-github'></i>
+      </span>
+    </a>
+    <button onclick='switchTheme()' class='btn float-btn' title='Switch theme'>
+      <span>
+        <i id='light-icon' class='fa-solid fa-sun'></i>
+        <i id='dark-icon' class='fa-solid fa-moon'></i>
+      </span>
+    </button>
+  </div>
+  <main>
+  <h1>Wall Os</h1>
+<h2 class='s1 clickable' onclick='activeSection("blue")' >
+BLUE
+</h2>
+<div class='section' id='blue'>
+<div class='pager'>
+<button class='btn pager-btn' onclick='loadPage("blue", 1)'>1</button>
+<button class='btn pager-btn' onclick='loadPage("blue", 2)'>2</button>
+</div>
+<div  id='blue-content'>
+</div>
+</div>
+<h2 class='s2 clickable' onclick='activeSection("gruvbox")' >
+GRUVBOX
+</h2>
+<div class='section' id='gruvbox'>
+<div class='pager'>
+<button class='btn pager-btn' onclick='loadPage("gruvbox", 1)'>1</button>
+<button class='btn pager-btn' onclick='loadPage("gruvbox", 2)'>2</button>
+</div>
+<div  id='gruvbox-content'>
+</div>
+</div>
+<h2 class='s3 clickable' onclick='activeSection("nord")' >
+NORD
+</h2>
+<div class='section' id='nord'>
+<div class='pager'>
+<button class='btn pager-btn' onclick='loadPage("nord", 1)'>1</button>
+<button class='btn pager-btn' onclick='loadPage("nord", 2)'>2</button>
+</div>
+<div  id='nord-content'>
+</div>
+</div>
+<h2 class='s4 clickable' onclick='activeSection("purple")' >
+PURPLE
+</h2>
+<div class='section' id='purple'>
+<div class='pager'>
+<button class='btn pager-btn' onclick='loadPage("purple", 1)'>1</button>
+<button class='btn pager-btn' onclick='loadPage("purple", 2)'>2</button>
+</div>
+<div  id='purple-content'>
+</div>
+</div>
+<h2 class='s5 clickable' onclick='activeSection("virtual-machines")' >
+VIRTUAL-MACHINES
+</h2>
+<div class='section' id='virtual-machines'>
+<div class='pager'>
+<button class='btn pager-btn' onclick='loadPage("virtual-machines", 1)'>1</button>
+</div>
+<div  id='virtual-machines-content'>
+</div>
+</div>
+</main>
+<script>
+  window.onload = () => {
+    loadPage('blue', 1);
+    loadPage('gruvbox', 1);
+    loadPage('nord', 1);
+    loadPage('purple', 1);
+    loadPage('virtual-machines', 1);
+
+  activeSection('blue');
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+    setTheme('dark');
+  }else{
+    setTheme('light');
+  }
+}
+</script>
+
+</body>
+</html>
